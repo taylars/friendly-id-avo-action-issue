@@ -62,3 +62,4 @@ group :test do
   gem "selenium-webdriver"
 end
 gem "avo", ">= 3.17"
+gem "friendly_id"

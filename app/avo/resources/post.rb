@@ -8,5 +8,6 @@ class Avo::Resources::Post < Avo::BaseResource
   def fields
     field :id, as: :id
     field :title, as: :text
+    field :slug, as: :text
   end
 end
