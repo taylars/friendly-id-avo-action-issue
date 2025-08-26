@@ -10,4 +10,8 @@ class Avo::Resources::Post < Avo::BaseResource
     field :title, as: :text
     field :slug, as: :text
   end
+
+  def actions
+    action Avo::Actions::CountQuery
+  end
 end
