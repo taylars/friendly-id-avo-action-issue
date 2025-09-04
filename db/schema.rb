@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_09_04_141608) do
+ActiveRecord::Schema[8.0].define(version: 2025_09_04_141957) do
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
     t.integer "sluggable_id", null: false
@@ -33,6 +33,10 @@ ActiveRecord::Schema[8.0].define(version: 2025_09_04_141608) do
     t.datetime "updated_at", null: false
     t.string "title"
     t.string "slug"
+    t.integer "organization_id", null: false
+    t.index ["organization_id"], name: "index_posts_on_organization_id"
     t.index ["slug"], name: "index_posts_on_slug", unique: true
   end
+
+  add_foreign_key "posts", "organizations"
 end
