@@ -14,5 +14,6 @@ class Avo::Resources::Post < Avo::BaseResource
 
   def actions
     action Avo::Actions::CountQuery
+    action Avo::Actions::DuplicatePost
   end
 end
