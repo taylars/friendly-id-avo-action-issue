@@ -8,5 +8,6 @@ class Avo::Resources::Organization < Avo::BaseResource
   def fields
     field :id, as: :id
     field :name, as: :text
+    field :slug, as: :text, only_on: :show
   end
 end
