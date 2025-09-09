@@ -4,10 +4,6 @@ class Post < ApplicationRecord
 
   belongs_to :organization
 
-  def to_param
-    id
-  end
-
   # Override method added by FriendlyId::Scoped to prevent overwriting
   # explicitly set slugs.
   # https://github.com/norman/friendly_id/issues/983
